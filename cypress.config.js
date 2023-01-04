@@ -10,7 +10,7 @@ module.exports = defineConfig({
   },
 
   env: {
-    "useremail": "admin@yourstore.com",
-    "userpassword": "admin"
+    "userEmail": "admin@yourstore.com",
+    "userPassword": "admin"
   }
 });

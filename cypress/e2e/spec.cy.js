@@ -41,7 +41,6 @@ describe('Basic crud method api tests', () => {
     cy.request('DELETE', '/api/users/2').then((response) => {
       expect(response.status).equal(204);
     });
-
   });
 
   it('PATCH', () => {
@@ -55,8 +54,15 @@ describe('Basic crud method api tests', () => {
     });
   });
 
-  it('login using custom command', () => {
+  it.only('login using custom command', () => {
     cy.visit('https://admin-demo.nopcommerce.com/login');
-    cy.Login(Cypress.env('useremail'), Cypress.env('userpassword'));
+    cy.Login(Cypress.env('userEmail'), Cypress.env('userPassword'));
+    cy.get(':nth-child(1) > .card > .card-header > .float-left').click();
+    cy.get('.navigation-top-menu-main > :nth-child(4) > .navigation-top-menu-link > .navigation-top-menu-label').click();
+    cy.get(':nth-child(1) > .list > :nth-child(2) > a').click();
+    cy.get('.desktop-logo > img').click();
+
   })
+
+
 }); 
