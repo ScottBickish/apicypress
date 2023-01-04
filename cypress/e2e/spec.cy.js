@@ -55,7 +55,7 @@ describe('Basic crud method api tests', () => {
     });
   });
 
-  it.only('login using custom command', () => {
+  it('login using custom command', () => {
     cy.visit('https://admin-demo.nopcommerce.com/login');
     cy.Login(Cypress.env('useremail'), Cypress.env('userpassword'));
   })
