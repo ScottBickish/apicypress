@@ -41,6 +41,7 @@ describe('Basic crud method api tests', () => {
     cy.request('DELETE', '/api/users/2').then((response) => {
       expect(response.status).equal(204);
     });
+
   });
 
   it('PATCH', () => {
