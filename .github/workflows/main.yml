@@ -1,14 +1,13 @@
 name: Cypress Tests
 on: [push]
-jobs: 
+jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2.6.0
       - name: Cypress.io
         uses: cypress-io/github-action@v5.0.2
-        with: 
-          build: npm run build
-          start: npm start
-    
+        with:
+          build: npm i
+          start: npx run
